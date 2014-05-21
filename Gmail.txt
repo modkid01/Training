@@ -1,0 +1,19 @@
+*** Settings ***
+Library    Selenium2Library
+Library    OperatingSystem
+
+*** Variables ***
+
+
+*** Testcases ***
+Test login gmail
+	Open Browser    http://www.gmail.com
+	Maximize Browser Window
+	Input Text    Email    @gmail.com
+	Input Text    Passwd    
+	Click Button    signIn
+	Wait Until Page Contains    @gmail.com
+	Wait Until Page Contains Element     xpath=//div[1]/a/span[@class="gb_X gbii"]    30
+	Click Element    xpath=//div[1]/a/span[@class="gb_X gbii"]
+	Wait Until Page Contains Element     gb_71    30
+	Click Element    gb_71
