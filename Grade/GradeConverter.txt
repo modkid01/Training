@@ -1,0 +1,114 @@
+*** Settings ***
+Library    Selenium2Library
+Library    OperatingSystem
+
+*** Variables ***
+
+
+*** Testcases ***
+Test Grade A score 80-100 lower boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    80
+	Click Button    convert
+	Wait Until Page Contains    A
+	Close Browser
+
+Test Grade A score 80-100 
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    90
+	Click Button    convert
+	Wait Until Page Contains    A
+	Close Browser
+
+Test Grade A score 80-100 upper boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    100
+	Click Button    convert
+	Wait Until Page Contains    A
+	Close Browser
+
+Test Grade B score 70-79 upper boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    79
+	Click Button    convert
+	Wait Until Page Contains    B
+	Close Browser
+
+Test Grade B score 70-79 lower boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    70
+	Click Button    convert
+	Wait Until Page Contains    B
+	Close Browser
+
+Test Grade B score 70-79 
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    75
+	Click Button    convert
+	Wait Until Page Contains    B
+	Close Browser
+
+Test Grade C score 60-69 upper boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    69
+	Click Button    convert
+	Wait Until Page Contains    C
+	Close Browser
+
+Test Grade C score 60-69 lower boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    60
+	Click Button    convert
+	Wait Until Page Contains    C
+	Close Browser
+
+Test Grade C score 60-69 
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    65
+	Click Button    convert
+	Wait Until Page Contains    C
+	Close Browser
+
+Test Grade D score 50-59 upper boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    59
+	Click Button    convert
+	Wait Until Page Contains    D
+	Close Browser
+
+Test Grade D score 50-59 lower boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    50
+	Click Button    convert
+	Wait Until Page Contains    D
+	Close Browser
+
+Test Grade D score 50-59 
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    55
+	Click Button    convert
+	Wait Until Page Contains    D
+	Close Browser
+
+Test Grade F score 0-49 upper boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    49
+	Click Button    convert
+	Wait Until Page Contains    F
+	Close Browser
+
+Test Grade F score 0-49 lower boundary
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    0
+	Click Button    convert
+	Wait Until Page Contains    F
+	Close Browser
+
+Test Grade F score 0-49 
+	Open Browser    http://demo-jenkins-web.herokuapp.com/
+	Input Text    score    20
+	Click Button    convert
+	Wait Until Page Contains    F
+	Close Browser
+*** Keywords ***
+
